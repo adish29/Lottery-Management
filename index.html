@@ -8,6 +8,7 @@
             table, th, td {
               border: 1px solid black;
               border-collapse: collapse;
+              width: 500px;
             }
         </style>
     </head>
@@ -16,19 +17,20 @@
         <h3>Add lottery roll to inventory</h3>
         <div>
             <form>
-                <input type="text" placeholder="Barcode Scan Value" id="barcodeScan">
-                <button type="button" onclick="productAddToTable()">Submit</button>
-                <script>$("#barcodeScan").focus();</script>
+                <input type="text" placeholder="Barcode Scan Value" id="barcodeScan"
+                onkeyUp="document.getElementById('rollNumber').innerHTML = this.value">
+                <button onclick="emptyField()" type="button">Empty scan field</button>
             </form>
         </div>
         <br><br>
         <div>
-            <div>Enter details for scanned roll(Each roll value is 300$)-<span id="rollNumber"></span></div>
+            <div>Details for Scanned Number -<span id="rollNumber"></span></div>
             <br>
             <form>
                 <input type="text" placeholder="Game name" id="gameName">
                 <input type="text" placeholder="Ticket cost" id="ticketCost">
-                <button type="button">Submit Details</button>
+                <button type="button" onclick="inventoryAddToTable()">Submit Details</button>
+                <script>$("#barcodeScan").focus();</script>
             </form>
         </div>
         <br><br>
@@ -41,10 +43,16 @@
         </div>
         <br><br>
         <div>
-            <table id="productTable" style="float: left;">
+            <table id="inventoryTable" style="float: left;">
                 <thead>
                     <tr>
-                        <th>List of rolls in inventory</th>
+                        <th colspan="4">List of rolls in inventory</th>
+                    </tr>
+                    <tr>
+                        <th>Barcode Number</th>
+                        <th>Name</th>
+                        <th>Cost</th>
+                        <th>Number of tickets</th>
                     </tr>
                 </thead>
             </table>
@@ -52,11 +60,13 @@
             <table style="float: left;margin-left: 100px;">
                 <thead>
                     <tr>
-                        <th colspan="2">Activated Rolls in shop</th>
+                        <th colspan="4">Activated Rolls in shop</th>
                     </tr>
                     <tr>
+                        <th>Barcode Number</th>
                         <th>Name</th>
                         <th>Cost</th>
+                        <th>Number of tickets</th>
                     </tr>
                 </thead>
             </table>
