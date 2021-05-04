@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Lottery Management</title>
+        <script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="./assets/index.js"></script>
+        <style>
+            table, th, td {
+              border: 1px solid black;
+              border-collapse: collapse;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Lottery management system demo</h1>
+        <h3>Add lottery roll to inventory</h3>
+        <div>
+            <form>
+                <input type="text" placeholder="Barcode Scan Value" id="barcodeScan">
+                <button type="button" onclick="productAddToTable()">Submit</button>
+                <script>$("#barcodeScan").focus();</script>
+            </form>
+        </div>
+        <br><br>
+        <div>
+            <div>Enter details for scanned roll(Each roll value is 300$)-<span id="rollNumber"></span></div>
+            <br>
+            <form>
+                <input type="text" placeholder="Game name" id="gameName">
+                <input type="text" placeholder="Ticket cost" id="ticketCost">
+                <button type="button">Submit Details</button>
+            </form>
+        </div>
+        <br><br>
+        <div>
+            <h3>Activation</h3>
+            <form>
+                <input type="text" placeholder="Scan barcode to activate roll">
+                <button type="button">Activate</button>
+            </form>
+        </div>
+        <br><br>
+        <div>
+            <table id="productTable" style="float: left;">
+                <thead>
+                    <tr>
+                        <th>List of rolls in inventory</th>
+                    </tr>
+                </thead>
+            </table>
+            
+            <table style="float: left;margin-left: 100px;">
+                <thead>
+                    <tr>
+                        <th colspan="2">Activated Rolls in shop</th>
+                    </tr>
+                    <tr>
+                        <th>Name</th>
+                        <th>Cost</th>
+                    </tr>
+                </thead>
+            </table>
+        </div>
+    </body>
+</html>
