@@ -1,5 +1,4 @@
 function inventoryAddToTable() {
-    // First check if a <tbody> tag exists, add one if not
     if ($("#inventoryTable tbody").length == 0) {
         $("#inventoryTable").append("<tbody></tbody>");
     }
@@ -22,6 +21,13 @@ function inventoryAddToTable() {
     else{
         console.log('Enter non zero value')
         $("#barcodeScan").focus();
+    }
+}
+
+function activation(){
+    console.log('Hi')
+    if ($("#activationTable tbody").length == 0) {
+        $("#activationTable").append("<tbody></tbody>");
     }
 }
 

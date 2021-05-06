@@ -1,0 +1,38 @@
+{
+  "Rolls" : {
+    "Inventory" : {
+      "1234" : {
+        "Name" : "abcd",
+        "barcodeNo" : 1234,
+        "cost" : 2,
+        "numberOfTickets" : 150
+      },
+      "5678" : {
+        "Name" : "xyz",
+        "barcodeNo" : 5678,
+        "cost" : 3,
+        "numberOfTickets" : 100
+      },
+      "3456" : {
+        "Name" : "qwerty",
+        "barcodeNo" : 3456,
+        "cost" : 5,
+        "numberOfTickets" : 60
+      }
+    },
+    "Activated" : {
+      "8972" : {
+        "Name" : "mark",
+        "barcodeNo" : 8972,
+        "cost" : 4,
+        "numberOfTickets" : 75
+      },
+      "8901" : {
+        "Name" : "germaine",
+        "barcodeNo" : 8901,
+        "cost" : 1,
+        "numberOfTickets" : 300
+      }
+    }
+  }
+}
