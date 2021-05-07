@@ -46,7 +46,7 @@
             <h3>Activation</h3>
             <form>
                 <input type="text" placeholder="Scan barcode to activate roll" id="activate">
-                <button type="button" onclick="activation()">Activate</button>
+                <button type="button" onclick="updateActivation()">Activate</button>
             </form>
         </div>
         <br><br>
@@ -63,6 +63,12 @@
                         <th>Number of tickets</th>
                     </tr>
                 </thead>
+                <tbody id="tableInventoryBody">
+                    <!-- <tr>
+                        <td>Showing</td>
+                        <td>Data</td>
+                    </tr> -->
+                </tbody>
             </table>
             
             <table id="activationTable" style="float: left;margin-left: 100px;">
@@ -77,6 +83,12 @@
                         <th>Number of tickets</th>
                     </tr>
                 </thead>
+                <tbody id="tableActivatedBody">
+                    <!-- <tr>
+                        <td>Showing</td>
+                        <td>Data</td>
+                    </tr> -->
+                </tbody>
             </table>
         </div>
     </body>

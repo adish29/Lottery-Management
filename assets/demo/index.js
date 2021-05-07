@@ -36,3 +36,23 @@ function emptyField() {
     document.getElementById('rollNumber').innerHTML='';
     $("#barcodeScan").focus();
 }
+
+//order by key realtime database firebase eg.
+function inventoryTable(){
+    var inventory = firebase.database().ref('Rolls/Inventory/').orderByKey();
+    inventory.once("value")
+     .then(function(snapshot) {
+      snapshot.forEach(function(childSnapshot) {
+      // key will be barcode numbers in inventory
+      var key = childSnapshot.key;
+      console.log(key)
+      // childData will be the actual contents of the child
+      var childData = childSnapshot.val();
+      console.log(childData.Name)
+      console.log(childData.barcodeNo)
+      console.log(childData.cost)
+      console.log(childData.numberOfTickets)
+      });
+    });
+}
+//snapshot.numChildren().....get count of number of children
